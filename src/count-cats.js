@@ -1,5 +1,6 @@
 module.exports = function countCats(matrix) {
-  //throw 'Not implemented';
-  let str = matrix.join();
-  return str.match(/(\^\^)/g).length;
+  let str = matrix.join(',');  
+  let arr = str.match(/(?<!\s)(\^\^)/g);
+ return (arr != null)? arr.length : 0 ;
+
 };
